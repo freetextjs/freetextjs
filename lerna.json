@@ -3,6 +3,5 @@
   "packages": [
     "packages/*"
   ],
-  "version": "0.0.0",
-  "includeFilteredDependencies": true
+  "version": "0.0.0"
 }

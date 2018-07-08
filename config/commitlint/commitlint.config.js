@@ -9,9 +9,9 @@ module.exports = {
       'always',
     ],
     'header-max-length': [
-      1,
+      2,
       'always',
-      50,
+      72,
     ],
     'scope-enum': [
       2,
