@@ -27,12 +27,12 @@
     "url": "https://github.com/freetextjs/freetextjs"
   },
   "scripts": {
-    "build": "run-s --silent build:esm build:umd build:common build:type",
+    "build": "run-p --silent build:esm build:umd build:common build:type",
     "build:esm": "tsc -p ./config/tsconfig/tsconfig.esm.json",
     "build:umd": "tsc -p ./config/tsconfig/tsconfig.umd.json",
     "build:common": "tsc -p ./config/tsconfig/tsconfig.common.json",
     "build:type": "tsc -p ./config/tsconfig/tsconfig.type.json",
-    "clean": "run-p clean:package clean:example",
+    "clean": "run-p clean:package",
     "clean:package": "rimraf dist",
     "watch": "run-p --silent watch:esm watch:umd watch:common watch:type",
     "watch:base": "tsc -w --preserveWatchOutput",
