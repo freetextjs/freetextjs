@@ -1,0 +1,52 @@
+{
+  "name": "@freetextjs/util",
+  "version": "0.0.0",
+  "description": "Util package of freetextjs",
+  "keywords": [
+    "editor",
+    "WYSIWYG",
+    "client"
+  ],
+  "homepage": "https://github.com/freetextjs/freetextjs#readme",
+  "bugs": "https://github.com/freetextjs/freetextjs/issue",
+  "license": "MIT",
+  "author": {
+    "name": "Junyoung Clare Jang",
+    "email": "jjc9310@gmail.com",
+    "url": "https://ailrun.github.io"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/common/index.js",
+  "browser": "dist/umd/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freetextjs/freetextjs"
+  },
+  "scripts": {
+    "build": "run-p --silent build:esm build:umd build:common build:type",
+    "build:esm": "tsc -p ./config/tsconfig/tsconfig.esm.json",
+    "build:umd": "tsc -p ./config/tsconfig/tsconfig.umd.json",
+    "build:common": "tsc -p ./config/tsconfig/tsconfig.common.json",
+    "build:type": "tsc -p ./config/tsconfig/tsconfig.type.json",
+    "clean": "run-p clean:package",
+    "clean:package": "rimraf dist",
+    "watch": "run-p --silent watch:esm watch:umd watch:common watch:type",
+    "watch:base": "tsc -w --preserveWatchOutput",
+    "watch:esm": "npm run watch:base -- -p ./config/tsconfig/tsconfig.esm.json",
+    "watch:umd": "npm run watch:base -- -p ./config/tsconfig/tsconfig.umd.json",
+    "watch:common": "npm run watch:base -- -p ./config/tsconfig/tsconfig.common.json",
+    "watch:type": "npm run watch:base -- -p ./config/tsconfig/tsconfig.type.json"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
