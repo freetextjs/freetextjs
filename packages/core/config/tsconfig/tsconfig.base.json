@@ -1,0 +1,11 @@
+{
+  "extends": "../../../../config/tsconfig/tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "../..",
+    "lib": [
+      "DOM",
+      "ES6"
+    ],
+    "target": "ES5"
+  }
+}

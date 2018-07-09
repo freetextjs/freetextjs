@@ -7,6 +7,9 @@
     "url": "https://github.com/freetextjs/freetextjs"
   },
   "scripts": {
+    "build": "lerna run build --",
+    "watch": "lerna run --stream watch --",
+    "watch:example": "lerna run --stream watch:example --",
     "commitmsg": "commitlint -E GIT_PARAMS --config ./config/commitlint/commitlint.config.js"
   },
   "devDependencies": {
