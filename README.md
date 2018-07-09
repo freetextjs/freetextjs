@@ -5,3 +5,4 @@ WYSIWYG editor component for web environment.
 
 ## Packages
 - [@freetextjs/core](./packages/core)
+- [@freetextjs/util](./packages/util)

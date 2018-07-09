@@ -20,6 +20,7 @@ module.exports = {
         'repo',
         'root',
         'core',
+        'util',
       ],
     ],
     'scope-empty': [
